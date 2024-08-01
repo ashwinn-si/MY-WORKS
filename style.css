@@ -1,0 +1,52 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins";
+    box-sizing: border-box;
+}
+.container{
+    height: 100vh;
+    width: 100%;
+    background: rgb(34,193,195);
+background: -moz-linear-gradient(183deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+background: -webkit-linear-gradient(183deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+background: linear-gradient(183deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#22c1c3",endColorstr="#fdbb2d",GradientType=1);
+}
+.sub_container{
+    width: 400px;
+    padding: 10px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+}
+
+#T1,#T2,#T3{
+    width: 300px;
+    font-size: 1.2rem;
+    margin: 30px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.737);
+    backdrop-filter: blur(10px);
+    padding: 10px 0;
+    border-radius: 10px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.header{
+    text-align: center;
+    font-size: 1.5rem;
+    background: transparent;
+    backdrop-filter: none;
+    margin: 30px; 
+    color: white;
+    font-weight: bold;
+}
+#T1:hover,#T2:hover,#T3:hover{
+    background-color: white;
+    transform: scale(1.1);
+}
