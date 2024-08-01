@@ -1,6 +1,8 @@
 if(window.innerWidth<768){
-    alert("kindly view the all the webistes in desktop for better experience");
+    document.querySelector(".alert_message").style.display="block";
+    document.querySelector(".sub_container").style.display="none";
 }
+
 document.getElementById("T1").addEventListener("click",()=>{
     window.location.href="TASK-1[Calculator]/index.html";
 })
