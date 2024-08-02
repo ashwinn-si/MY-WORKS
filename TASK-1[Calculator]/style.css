@@ -4,10 +4,18 @@
     font-family: "Poppins";
     box-sizing: border-box;
 }
+body{
+    background: hsla(186, 33%, 94%, 1);
+    background: linear-gradient(180deg, hsla(186, 33%, 94%, 1) 0%, hsla(216, 41%, 79%, 1) 100%);
+    background: -moz-linear-gradient(180deg, hsla(186, 33%, 94%, 1) 0%, hsla(216, 41%, 79%, 1) 100%);
+    background: -webkit-linear-gradient(180deg, hsla(186, 33%, 94%, 1) 0%, hsla(216, 41%, 79%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#EBF4F5", endColorstr="#B5C6E0", GradientType=1 );
+}
 .header{
     text-align: center;
     font-size: 2rem;
     margin: 10px 0;
+    font-weight: bold;
 }
 .container{
     position: absolute;
@@ -50,6 +58,11 @@
 #clear_button{
     text-align: right;
     margin-right: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+#clear_button:hover{
+    color: red;
 }
 .buttons_container{
     display: flex;
@@ -83,11 +96,13 @@
 .div11 { grid-area: 4 / 2 / 5 / 3; }
 .div12 { grid-area: 4 / 3 / 5 / 4; }
 .div1,.div2,.div3,.div4,.div5,.div6,.div7,.div8,.div9,.div10,.div11,.div12{
-    background-color: #abd4ff;
+    background-color: #cbc7b7;
     border-radius: 50%;
     text-align: center;
     padding: 25%;
     font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s;
 }
 .operations_container{
     width: 96px;
@@ -107,9 +122,15 @@
 .div22 { grid-area: 3 / 1 / 4 / 2; }
 .div23 { grid-area: 4 / 1 / 5 / 2; }
 .div20,.div21,.div22,.div23{
-    background-color: #02BF02;
+    background-color: #B0B7C0;
     border-radius: 50%;
     text-align: center;
     padding: 25%;
     font-size:2rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.div20:hover,.div21:hover,.div22:hover,.div23:hover,.div1:hover,.div2:hover,.div3:hover,.div4:hover,.div5:hover,.div6:hover,.div7:hover,.div8:hover,.div9:hover,.div10:hover,.div11:hover,.div12:hover{
+    transform: scale(1.1);
+    color: white;
 }
