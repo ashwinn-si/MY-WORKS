@@ -16,6 +16,7 @@ function display_changer(currency_name,key){
     if(key==1){
         document.getElementById("your_currency").innerHTML=currency_name;
         your_currency=currency_name;
+        converter(your_currency,exchange_currency);
     }else{
         document.getElementById("exchange_currency").innerHTML=currency_name;
         exchange_currency=currency_name;
