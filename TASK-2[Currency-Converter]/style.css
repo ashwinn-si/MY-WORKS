@@ -99,6 +99,10 @@ body{
     cursor: pointer;
     transition: all 0.3s;
 }
+.div12{
+    background-color: black;
+    color: white;
+}
 /*Exchange container style*/
 .exchange_container{
     width: 320px;
@@ -140,16 +144,53 @@ body{
     font-size: 1.5rem; 
     cursor: pointer;   
 }
-.inner_container div:hover{
-    transform: scale(1.1);
-    color: white;
-    background-color: black;
-}
-.div1:hover,.div2:hover,.div3:hover,.div4:hover,.div5:hover,.div6:hover,.div7:hover,.div8:hover,.div9:hover,.div10:hover,.div11:hover,.div12:hover{
-    transform: scale(1.1);
-    color: #ffe5e0;
-    background-color: black;
-}
+
 .changer_active{
     color: black;
+}
+@media(min-width:768px){
+    .inner_container div:hover{
+        transform: scale(1.1);
+        color: white;
+        background-color: black;
+    }
+    .div1:hover,.div2:hover,.div3:hover,.div4:hover,.div5:hover,.div6:hover,.div7:hover,.div8:hover,.div9:hover,.div10:hover,.div11:hover{
+        transform: scale(1.1);
+        color: #ffe5e0;
+        background-color: black;
+    }
+    .div12:hover{
+        background-color: white;
+        color: black;
+    }
+}
+@media(max-width:768px){
+    .container,.exchange_container{
+        width: 320px;
+    }
+    .curr_currency_container,.res_currency_container{
+        width: 300px;
+    }
+    .curr_value{
+        width: 220px;
+    }
+    .changer{
+        width: 80px;
+    }
+    .numbers_container{
+        width: 300px;
+    }
+    .exchange_container,.inner_container{
+        width: 220px;
+    }
+    .inner_container div{
+        width: 180px;
+    }
+    .exchange_container{
+        left:37%;
+    }
+    .div1,.div2,.div3,.div4,.div5,.div6,.div7,.div8,.div9,.div10,.div11,.div12{
+        padding: 15%;
+    }
+
 }

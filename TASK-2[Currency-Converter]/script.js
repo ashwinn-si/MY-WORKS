@@ -22,6 +22,7 @@ function display_changer(currency_name,key){
         exchange_currency=currency_name;
         converter(your_currency,exchange_currency);
     }
+    
 }
 document.getElementById("ind").addEventListener('click',()=>{
     display_changer("IND",key);
@@ -107,6 +108,9 @@ function converter(your_currency,exchange_currency){
         }else{
             res=value;
         }
+    }
+    if (typeof res=== 'number' && !Number.isInteger(res)) {
+        res= res.toFixed(4); // Format to four decimal places if it's a float
     }
     document.getElementById("exchange_currency_value").innerHTML=res;
 }
