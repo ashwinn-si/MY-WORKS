@@ -61,9 +61,7 @@ body{
     cursor: pointer;
     transition: all 0.3s;
 }
-#clear_button:hover{
-    color: red;
-}
+
 .buttons_container{
     display: flex;
     flex-direction: row; 
@@ -104,6 +102,9 @@ body{
     cursor: pointer;
     transition: all 0.3s;
 }
+.div12{
+    background-color: white;
+}
 .operations_container{
     width: 96px;
     margin-right: 10px;
@@ -130,7 +131,38 @@ body{
     cursor: pointer;
     transition: all 0.3s;
 }
-.div20:hover,.div21:hover,.div22:hover,.div23:hover,.div1:hover,.div2:hover,.div3:hover,.div4:hover,.div5:hover,.div6:hover,.div7:hover,.div8:hover,.div9:hover,.div10:hover,.div11:hover,.div12:hover{
-    transform: scale(1.1);
-    color: white;
+
+@media(min-width : 768px){
+    .div20:hover,.div21:hover,.div22:hover,.div23:hover,.div1:hover,.div2:hover,.div3:hover,.div4:hover,.div5:hover,.div6:hover,.div7:hover,.div8:hover,.div9:hover,.div10:hover,.div11:hover{
+        transform: scale(1.1);
+        color: white;
+    }
+    .div12:hover{
+        background-color: black;
+        color: white;
+    }
+    #clear_button:hover{
+        color: red;
+    }
+
+}
+@media(max-width:768px){
+    .container{
+        width: 320px;
+    }
+    .displayer_container{
+        width: 300px;
+    }
+    .displayer{
+        width: 280px;
+    }
+    .numbers_container{
+        width: 194px;
+    }
+    .operations_container{
+        width: 86px;
+    }
+    .div1,.div2,.div3,.div4,.div5,.div6,.div7,.div8,.div9,.div10,.div11,.div12{
+        padding: 40%;
+    }
 }

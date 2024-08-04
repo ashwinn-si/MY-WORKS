@@ -45,7 +45,12 @@ document.getElementById("point").addEventListener("click",()=>{
     equation+='.';
 });
 document.getElementById("equal_to").addEventListener("click",()=>{
-    equation=(eval(equation)).toString();
+    let result=eval(equation);
+    if (typeof result === 'number' && !Number.isInteger(result)) {
+        result = result.toFixed(4); // Format to four decimal places if it's a float
+    }
+    equation=(result).toString();
+
 });
 document.getElementById("clear_button").addEventListener("click",()=>{
     equation='';
