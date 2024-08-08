@@ -29,11 +29,13 @@
     flex-direction: column;
     
 }
-
+.button_container{
+    padding-bottom: 20px;
+}
 #internal_mark_cal_butt,#stone_paper_scissor_butt,#calculator_butt,#currency_conv_butt,#website_button,#yucii_page_butt{
     width: 300px;
     font-size: 1.2rem;
-    margin: 10px;
+    margin: 20px;
     text-align: center;
     background: rgba(255, 255, 255, 0.737);
     backdrop-filter: blur(10px);
@@ -52,9 +54,93 @@
     font-weight: bold;
 }
 @media(min-width:768px){
+    body{
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+    .button_container{
+        z-index: 10;
+    }
     #internal_mark_cal_butt:hover,#stone_paper_scissor_butt:hover,#calculator_butt:hover,#currency_conv_butt:hover,#website_button:hover,#yucii_page_butt:hover{
         background-color: white;
-        transform: scale(1.1);
+        animation-name: spin-1;
+        animation-duration: 1s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: 1;
+        transform: scale(1.5);
+        animation-fill-mode: forwards;
+        color: white;
+        
+    }
+    #stone_paper_scissor_butt:hover,#currency_conv_butt:hover,#yucii_page_butt:hover{
+        animation-name: spin-2;
+    }
+    .sub_container{
+        animation-name: container_ani;
+        animation-duration: 2s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+    .button_container,.header{
+        animation-name: button_ani;
+        animation-duration: 4s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: 1;
+    }
+    .header{
+        animation-name: header_ani;
+    }
+    @keyframes header_ani{
+        0%{
+            transform: translate(400%,400%);
+        }
+        100%{
+            transform: none;
+        }
+    }
+    @keyframes button_ani{
+        0%{
+            transform: translate(-400%,-400%);
+        }
+        100%{
+            transform: none;
+        }
+    }
+    @keyframes container_ani {
+        from{
+            transform: translate(100%,100%);
+            
+        }
+        to{
+            transform: translate(-50%,-50%);
+            
+        }
+        
+    }
+    @keyframes spin-1{
+        0%{
+            transform: rotate(0deg);
+            z-index: 10;
+            background-color: lightgoldenrodyellow;
+        }
+        100%{
+            transform: rotate(360deg) scale(1.2);
+            z-index: 10;
+            background-color: gold;
+        }
+    }
+    @keyframes spin-2{
+        0%{
+            transform: rotate(0deg);
+            z-index: 10;
+            background-color: lightgoldenrodyellow;
+        }
+        100%{
+            transform: rotate(-360deg) scale(1.2);
+            z-index: 10;
+            background-color: gold;
+        }
     }
 }
 @media(max-width:768px){
@@ -65,8 +151,8 @@
         align-items: center;
         flex-direction: column;
     }
-    #internal_mark_cal_butt,#stone_paper_scissor_butt,#calculator_butt,#currency_conv_butt,#apple_website_button,#yucii_page_butt{
+    #internal_mark_cal_butt,#stone_paper_scissor_butt,#calculator_butt,#currency_conv_butt,#website_button,#yucii_page_butt{
         width: 250px;
-        margin: 10px 0px;
+        
     }
 }
