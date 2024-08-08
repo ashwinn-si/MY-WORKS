@@ -15,6 +15,7 @@
 }
 .sub_container{
     width: 500px;
+    height: 300px;
     padding: 10px;
     position: absolute;
     top:47%;
@@ -30,7 +31,7 @@
     
 }
 
-#internal_mark_cal_butt,#stone_paper_scissor_butt,#calculator_butt,#currency_conv_butt,#website_button,#yucii_page_butt{
+#tesla_website_button,#apple_website_button{
     width: 300px;
     font-size: 1.2rem;
     margin: 10px;
@@ -52,7 +53,7 @@
     font-weight: bold;
 }
 @media(min-width:768px){
-    #internal_mark_cal_butt:hover,#stone_paper_scissor_butt:hover,#calculator_butt:hover,#currency_conv_butt:hover,#website_button:hover,#yucii_page_butt:hover{
+    #tesla_website_button:hover,#apple_website_button:hover{
         background-color: white;
         transform: scale(1.1);
     }
@@ -60,13 +61,15 @@
 @media(max-width:768px){
     .sub_container{
         width: 300px;
+        height: 300px;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
     }
-    #internal_mark_cal_butt,#stone_paper_scissor_butt,#calculator_butt,#currency_conv_butt,#apple_website_button,#yucii_page_butt{
+    #tesla_website_button,#apple_website_button{
         width: 250px;
         margin: 10px 0px;
     }
+    
 }

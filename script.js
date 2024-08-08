@@ -1,14 +1,20 @@
-if(window.innerWidth<768){
-    document.querySelector(".alert_message").style.display="block";
-    document.querySelector(".sub_container").style.display="none";
-}
 
-document.getElementById("T1").addEventListener("click",()=>{
-    window.location.href="TASK-1[Calculator]/index.html";
+document.getElementById("internal_mark_cal_butt").addEventListener("click",()=>{
+    window.location.href="https://ashwinn-si.github.io/internal_mark_calculatorl/";
 })
-document.getElementById("T2").addEventListener("click",()=>{
-    window.location.href="TASK-2[Currency-Converter]/index.html";
+document.getElementById("stone_paper_scissor_butt").addEventListener("click",()=>{
+    window.location.href="https://ashwinn-si.github.io/rock_paper_scissor/";
 })
-document.getElementById("T3").addEventListener("click",()=>{
-    window.location.href="TASK-3[Login-Page]/index.html";
+document.getElementById("calculator_butt").addEventListener("click",()=>{
+    window.location.href="https://ashwinn-si.github.io/Calculator/";
+})
+document.getElementById("currency_conv_butt").addEventListener("click",()=>{
+    window.location.href="https://ashwinn-si.github.io/Currency-Converter/";
+})
+document.getElementById("website_button").addEventListener("click",()=>{
+    window.location.href="Website_Recreation/index.html";
+})
+
+document.getElementById("yucii_page_butt").addEventListener("click",()=>{
+    window.location.href="https://yuci-chennaisouth.github.io/YUCI-HOMEPAGE/";
 })
