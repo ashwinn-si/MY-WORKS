@@ -9,7 +9,8 @@
     width: 100%;
     background: #121212;
     cursor: pointer;
-    
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 .sub_container{
     width: 500px;
