@@ -7,11 +7,9 @@
 .container{
     height: 100vh;
     width: 100%;
-    background: rgb(34,193,195);
-    background: -moz-linear-gradient(183deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
-    background: -webkit-linear-gradient(183deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
-    background: linear-gradient(183deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#22c1c3",endColorstr="#fdbb2d",GradientType=1);
+    background: #121212;
+    cursor: pointer;
+    
 }
 .sub_container{
     width: 500px;
@@ -20,14 +18,13 @@
     top:47%;
     left:50%;
     transform: translate(-50%,-50%);
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(64, 64, 64, 0.2);
     backdrop-filter: blur(10px);
     border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    
 }
 .button_container{
     padding-bottom: 20px;
@@ -52,6 +49,56 @@
     margin: 30px; 
     color: white;
     font-weight: bold;
+    
+}
+.sub_container{
+    animation-name: container_ani;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+.button_container{
+    animation-name: button_ani;
+    animation-duration: 7s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+}
+.header{
+    animation-name: header_ani;
+    animation-duration: 5.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+/*animation*/
+@keyframes header_ani{
+    0%{
+        transform: translate(400%,400%);
+    }
+    100%{
+        transform: none;
+        text-shadow: 0 0 10px #fcfcfc, 0 0 20px #ffffff, 0 0 30px #ffffff, 0 0 40px #ffffff, 0 0 50px #ffffff, 0 0 60px #ffffff, 0 0 70px #fffeff;
+    }
+}
+@keyframes button_ani{
+    0%{
+        transform: translate(-400%,-400%);
+    }
+    100%{
+        transform: none;
+    }
+}
+@keyframes container_ani {
+    from{
+        transform: translate(100%,100%);
+        
+    }
+    to{
+        transform: translate(-50%,-50%);
+        box-shadow: 0 0 20px gold, 0 0 40px gold, 0 0 60px gold, 0 0 80px gold;
+    }
+    
 }
 @media(min-width:768px){
     body{
@@ -62,85 +109,10 @@
         z-index: 10;
     }
     #internal_mark_cal_butt:hover,#stone_paper_scissor_butt:hover,#calculator_butt:hover,#currency_conv_butt:hover,#website_button:hover,#yucii_page_butt:hover{
+        transform:scale(1.2);
+        box-shadow: 0 0 20px gold, 0 0 40px gold, 0 0 60px gold, 0 0 80px gold;
         background-color: white;
-        animation-name: spin-1;
-        animation-duration: 1s;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count: 1;
-        transform: scale(1.5);
-        animation-fill-mode: forwards;
-        color: white;
         
-    }
-    #stone_paper_scissor_butt:hover,#currency_conv_butt:hover,#yucii_page_butt:hover{
-        animation-name: spin-2;
-    }
-    .sub_container{
-        animation-name: container_ani;
-        animation-duration: 2s;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count: 1;
-        animation-fill-mode: forwards;
-    }
-    .button_container,.header{
-        animation-name: button_ani;
-        animation-duration: 4s;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count: 1;
-    }
-    .header{
-        animation-name: header_ani;
-    }
-    @keyframes header_ani{
-        0%{
-            transform: translate(400%,400%);
-        }
-        100%{
-            transform: none;
-        }
-    }
-    @keyframes button_ani{
-        0%{
-            transform: translate(-400%,-400%);
-        }
-        100%{
-            transform: none;
-        }
-    }
-    @keyframes container_ani {
-        from{
-            transform: translate(100%,100%);
-            
-        }
-        to{
-            transform: translate(-50%,-50%);
-            
-        }
-        
-    }
-    @keyframes spin-1{
-        0%{
-            transform: rotate(0deg);
-            z-index: 10;
-            background-color: lightgoldenrodyellow;
-        }
-        100%{
-            transform: rotate(360deg) scale(1.2);
-            z-index: 10;
-            background-color: gold;
-        }
-    }
-    @keyframes spin-2{
-        0%{
-            transform: rotate(0deg);
-            z-index: 10;
-            background-color: lightgoldenrodyellow;
-        }
-        100%{
-            transform: rotate(-360deg) scale(1.2);
-            z-index: 10;
-            background-color: gold;
-        }
     }
 }
 @media(max-width:768px){
