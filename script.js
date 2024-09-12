@@ -12,9 +12,5 @@ document.getElementById("currency_conv_butt").addEventListener("click",()=>{
     window.location.href="https://ashwinn-si.github.io/Currency-Converter/";
 })
 document.getElementById("website_button").addEventListener("click",()=>{
-    window.location.href="Website_Recreation/index.html";
-})
-
-document.getElementById("yucii_page_butt").addEventListener("click",()=>{
-    window.location.href="https://yuci-chennaisouth.github.io/YUCI-HOMEPAGE/";
+    window.location.href="https://github.com/ashwinn-si/Website-Works";
 })
